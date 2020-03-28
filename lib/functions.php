@@ -59,7 +59,6 @@ namespace Amp
      *
      * @param callable(mixed ...$args):(\Generator<mixed,Promise|ReactPromise|array<array-key, Promise|ReactPromise>,mixed,Promise<TReturn>|ReactPromise|TReturn>|Promise<TReturn>|ReactPromise|TReturn)
      *     $callback
-     * @param mixed ...$args Arguments to pass to the function.
      *
      * @return Promise<TReturn>
      */
@@ -94,7 +93,6 @@ namespace Amp
      *
      * @param callable(mixed ...$args):(\Generator<mixed,Promise|ReactPromise|array<array-key, Promise|ReactPromise>,mixed,Promise<TReturn>|ReactPromise|TReturn>|Promise<TReturn>|ReactPromise|TReturn)
      *     $callback
-     * @param mixed ...$args
      *
      * @return void
      *
@@ -344,7 +342,7 @@ namespace Amp\Promise
      *
      * @param Promise[]|ReactPromise[] $promises Array of only promises.
      *
-     * @psalm-param array<array-key, Promise|ReactPromise> $promises
+     * @param array<array-key, Promise|ReactPromise> $promises
      *
      * @return Promise
      *
@@ -740,9 +738,7 @@ namespace Amp\Iterator
      *
      * @template TValue
      *
-     * @param Iterator $iterator
-     *
-     * @psalm-param Iterator<TValue> $iterator
+     * @param Iterator<TValue> $iterator
      *
      * @return Promise
      * @psalm-return Promise<array<array-key, TValue>>
